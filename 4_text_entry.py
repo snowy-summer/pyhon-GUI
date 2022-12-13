@@ -14,8 +14,13 @@ e.pack()
 e.insert(0,"한 줄만 입력하세요")
 
 def btncmd() :
+    #내용 출력
     print(txt.get("1.0",END))  # 처음 부터 끝까지의 텍스트를 가지고 온다.   1은 첫 째줄을 의미하고 0은 0번째의 단어 모음(띄어쓰기 기준)
     print(e.get())
+
+    #내용 삭제
+    txt.delete("1.0",END)
+    e.delete(0,END)
 
 btn = Button(root, text="클릭", command = btncmd)
 btn.pack()
